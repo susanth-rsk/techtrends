@@ -1,0 +1,46 @@
+## Docker commands used to build the application 
+docker build -t susanthrsk/techtrends .
+
+## Docker commands used to run the application
+docker run -d --name techtrends -p 7111:3111 susanthrsk/techtrends
+
+## Docker commands used to get the application logs
+docker logs -f techtrends
+
+## Logs from the container running the TechTrends application
+susan@DESKTOP-OTUDF3G MINGW64 ~/nd064_course_1/project (main)
+$ docker logs -f techtrends
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-08-27 23:36:22 : werkzeug : WARNING   * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-08-27 23:36:22 : werkzeug : INFO      * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-08-27 23:36:31 : app : INFO     Metrics request successfull
+2022-08-27 23:36:31 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:31] "GET /metrics HTTP/1.1" 200 -
+2022-08-27 23:36:40 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:40] "GET / HTTP/1.1" 200 -
+2022-08-27 23:36:40 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:40] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:36:46 : app : INFO     Retrieved requested article: 2020 CNCF Annual Report
+2022-08-27 23:36:46 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:46] "GET /1 HTTP/1.1" 200 -
+2022-08-27 23:36:46 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:46] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:36:49 : app : INFO     About Us page was successfully retrieved
+2022-08-27 23:36:49 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:49] "GET /about HTTP/1.1" 200 -
+2022-08-27 23:36:49 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:49] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:36:51 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:51] "GET /create HTTP/1.1" 200 -
+2022-08-27 23:36:51 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:36:51] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:37:06 : app : INFO     New article created: Testing
+2022-08-27 23:37:06 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:06] "POST /create HTTP/1.1" 302 -
+2022-08-27 23:37:06 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:06] "GET / HTTP/1.1" 200 -
+2022-08-27 23:37:06 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:06] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:37:08 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:08] "GET /create HTTP/1.1" 200 -
+2022-08-27 23:37:08 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:08] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:37:09 : app : ERROR    Article could not be created as no title was provided
+2022-08-27 23:37:09 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:09] "POST /create HTTP/1.1" 200 -
+2022-08-27 23:37:09 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:09] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-08-27 23:37:16 : app : INFO     Healthz request successfull
+2022-08-27 23:37:16 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:16] "GET /healthz HTTP/1.1" 200 -
+2022-08-27 23:37:48 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:48] "GET / HTTP/1.1" 200 -
+2022-08-27 23:37:48 : werkzeug : INFO     172.17.0.1 - - [27/Aug/2022 23:37:48] "GET /static/css/main.css HTTP/1.1" 304 -
+
