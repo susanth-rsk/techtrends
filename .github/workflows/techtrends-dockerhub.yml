@@ -4,6 +4,7 @@ on:
   push:
     branches: [master]
 
+
 jobs:
   techtrends-docker-build:
     runs-on: ubuntu-latest
