@@ -17,7 +17,6 @@ spec:
     spec:
       containers:
       - image:  susanthrsk/techtrends:latest
-	imagePullPolicy: IfNotPresent
         name: techtrends
         resources:
           requests:
